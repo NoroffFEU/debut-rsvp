@@ -45,7 +45,7 @@ function RsvpForm() {
     setLoading(true);
 
     try {
-      await addDoc(collection(db, "rsvps"), payload);
+      await addDoc(collection(db, "rsvp"), payload);
       localStorage.setItem("rsvpSuccess", "true");
       toast.success("🎉 RSVP submitted successfully!");
       setForm({ name: "", email: "", guests: 1, message: "" });

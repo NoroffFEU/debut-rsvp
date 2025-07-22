@@ -12,7 +12,7 @@ export default function RSVPList() {
   useEffect(() => {
     const fetchRSVPs = async () => {
       try {
-        const querySnapshot = await getDocs(collection(db, "rsvps"));
+        const querySnapshot = await getDocs(collection(db, "rsvp"));
         const data = querySnapshot.docs.map((doc) => ({
           id: doc.id,
           ...doc.data(),
