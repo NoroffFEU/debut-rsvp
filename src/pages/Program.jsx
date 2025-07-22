@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const schedule = [
   { time: "4:00 PM", activity: "Guest Arrival & Welcome Drinks" },
@@ -14,13 +15,14 @@ const schedule = [
 ];
 
 function Program() {
+  const navigate = useNavigate();
   return (
     <div className="min-h-screen px-6 py-12 max-w-3xl mx-auto text-center">
       <h2 className="text-4xl font-bold text-pink-700 mb-6">
         🎉 Celebration Program
       </h2>
       <p className="text-white mb-4">
-        Here's the rundown of this memorable evening celebrating Grace's 75th
+        Here's the rundown of this memorable evening celebrating Ashley's 18th
         birthday.
       </p>
       <p className="text-xs text-[#ffbf00] font-italic text-white mb-8">
@@ -37,6 +39,13 @@ function Program() {
           </div>
         ))}
       </div>
+      <button
+        type="button"
+        onClick={() => navigate(-1)}
+        className="text-white font-semibold mb-4 hover:underline m-7"
+      >
+        ← Back
+      </button>
     </div>
   );
 }

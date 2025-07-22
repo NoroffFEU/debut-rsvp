@@ -74,42 +74,44 @@ function Home() {
   };
 
   return (
-    <div className="p-4 flex flex-col sm:flex-col justify-center">
+    <div className="p-4 flex flex-col justify-center bg-pink-50 min-h-screen">
       {/* Hero Section */}
-      <section className="w-full relative">
-        {/* <img
-          src="/banner-mami.png"
-          alt="birthday banner"
-          className="w-full max-h-[600px]"
-        /> */}
-
-        <div className="mt-55 px-4 absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-center items-center text-white text-center">
-          <div className="mt-30 text-[#ffbf00]">
-            <h1 className="text-6xl font-extrabold mb-2">Ashley Dominique</h1>
-            <h2 className="text-6xl font-bold text-white italic">75th</h2>
-            <h2 className="text-6xl text-white font-bold">Birthday</h2>
-            <p className="text-2xl mb-5 mt-12">
-              Roses, candles, dance, laughter and love! <br />
+      <section className="relative min-h-[500px]">
+        <div className="rounded-2xl px-4 absolute inset-0 bg-[#a70000] bg-opacity-40 flex flex-col justify-center items-center text-center">
+          <div className="mt-8 text-[#ffbf00]">
+            <h1 className="text-4xl sm:text-6xl font-extrabold mb-2">
+              ASHLEY DOMINIQUE
+            </h1>
+            <h2 className="text-4xl sm:text-6xl font-bold italic text-white">
+              18th
+            </h2>
+            <h2 className="text-4xl sm:text-6xl text-white font-bold">
+              Birthday 
+            </h2>
+            <p className="text-xl sm:text-2xl mb-5 mt-6">
+              Roses, candles, dance, laughter and love!
             </p>
-            <p className="text-white">RSVP strictly by Sunday 10th August 2025.</p>
+            <p className="text-white">
+              RSVP strictly by Sunday 10th August 2025.
+            </p>
           </div>
 
           {rsvpName ? (
-            <p className="text-green-300 font-medium mb-2">
+            <p className="text-green-300 font-medium mt-4">
               🎉 You’ve RSVPed as <strong>{rsvpName}</strong>
               {rsvpEmail && <span> ({rsvpEmail})</span>}
             </p>
           ) : (
-            <div className="flex gap-4 mt-2 mb-9">
+            <div className="flex gap-4 mt-4 mb-8">
               <button
                 onClick={handleRsvpClick}
-                className="bg-pink-600 hover:bg-pink-700 transition-colors text-white font-semibold px-4 py-2 rounded-full"
+                className="rsvp-button hover:bg-pink-700 transition-colors text-white font-semibold px-4 py-2 rounded-full"
               >
                 RSVP Now
               </button>
               <button
                 onClick={handleGiftClick}
-                className="bg-yellow-500 hover:bg-yellow-600 transition-colors text-white font-semibold px-4 py-2 rounded-full"
+                className="send-gift-button hover:bg-yellow-600 transition-colors text-white font-semibold px-4 py-2 rounded-full"
               >
                 Send a Gift 🎁
               </button>
@@ -118,16 +120,18 @@ function Home() {
         </div>
       </section>
 
-      {/* ✅ CameraCapture visible for everyone */}
-      <section className="mt-110 flex justify-center">
+      <div className="flex justify-center text-5xl p-4 mt-5">🎂🎂🎂🎈🎈🎈</div>
+
+      {/* Camera Capture Section */}
+      <section className="flex justify-center">
         <div className="w-full max-w-2xl">
           <CameraCapture rsvpName={rsvpName} />
         </div>
       </section>
 
-      {/* Slider Section */}
-      <section className="mt-2 container w-full mx-auto max-w-5xl flex flex-col justify-center">
-        <h2 className="p-4 text-center text-3xl">
+      {/* Venue Slider Section */}
+      <section className="mt-12 w-full mx-auto max-w-5xl flex flex-col justify-center">
+        <h2 className="p-4 text-center text-3xl text-pink-700 font-bold">
           The Venue - Marks Tey Parish Hall
         </h2>
 
@@ -138,7 +142,7 @@ function Home() {
                 <img
                   src={src}
                   alt={`slide-${index}`}
-                  className="w-full h-70 rounded-2xl"
+                  className="w-full h-72 object-cover rounded-2xl"
                 />
               </div>
             ))}
@@ -150,7 +154,7 @@ function Home() {
       </section>
 
       {/* RSVP Section */}
-      <section>
+      <section className="mt-12">
         <RSVPForm />
       </section>
     </div>

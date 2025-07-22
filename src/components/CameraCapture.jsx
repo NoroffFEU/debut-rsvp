@@ -106,8 +106,8 @@ export default function CameraCapture({ rsvpName }) {
   }, []);
 
   return (
-    <div className="text-center mt-10">
-      <h3 className="text-white text-lg font-semibold mb-2">
+    <div className="text-center text-gray-700 mt-10">
+      <h3 className="text-lg font-semibold mb-2">
         📷 Upload a Memory
       </h3>
 
@@ -117,7 +117,7 @@ export default function CameraCapture({ rsvpName }) {
         placeholder="Say something about this memory..."
         minLength={30}
         required
-        className="w-full max-w-md mx-auto p-2 border rounded mb-4 text-white"
+        className="w-full max-w-md mx-auto p-2 border rounded mb-4"
       />
 
       <div className="mb-4">
@@ -173,7 +173,7 @@ export default function CameraCapture({ rsvpName }) {
 
       {/* Live Gallery */}
       <div className="mt-10">
-        <h4 className="text-white text-lg mb-4">🖼️ Recent Uploads</h4>
+        <h4 className="text-gray-600 text-lg mb-4">🖼️ Recent Uploads</h4>
         <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
           {gallery.map((item, idx) =>
             item.type === "image" ? (

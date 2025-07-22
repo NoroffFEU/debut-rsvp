@@ -8,7 +8,8 @@ function About() {
       <h2 className="text-3xl font-bold text-pink-700 mb-6">📅 Birthday Details</h2>
 
       <div className="bg-pink-50 p-6 rounded shadow-md">
-        <p className="text-gray-600 text-lg mb-4">
+        <h3 className='text-pink-700 text-4xl'>You're Invited!</h3>
+        <p className="text-gray-600 text-lg mb-4 mt-4">
           <strong>Date:</strong> Saturday, 13th September 2025<br />
           <strong>Time:</strong> 4:00 PM – 11:30 PM
         </p>

@@ -64,4 +64,12 @@ button:focus-visible {
   color: #213547;
 }
 
+.rsvp-button {
+  background-color: rgb(239, 39, 73);
+}
+
+.send-gift-button {
+  background-color: green;
+}
+
 
