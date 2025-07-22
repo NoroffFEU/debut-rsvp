@@ -86,7 +86,7 @@ function Home() {
               18th
             </h2>
             <h2 className="text-4xl sm:text-6xl text-white font-bold">
-              Birthday 
+              Birthday
             </h2>
             <p className="text-xl sm:text-2xl mb-5 mt-6">
               Roses, candles, dance, laughter and love!
@@ -121,6 +121,12 @@ function Home() {
       </section>
 
       <div className="flex justify-center text-5xl p-4 mt-5">🎂🎂🎂🎈🎈🎈</div>
+          <div className="flex justify-center">
+            <p className="text-center text-red-600 font-bold border rounded-2xl max-w-4xl p-4">As the De La Paz family, we are exceedingly pleased to request your
+              presence alongside Ashley Dominique's 18th debut; as we traditionally celebrate and honour
+              this new coming of age. <br />Upon this very night, you and many other significant individuals in her life, will
+              experience an unforgettable evening as we symbolically mark her grand transition <br /> from adolescence to young adulthood. </p>
+          </div> 
 
       {/* Camera Capture Section */}
       <section className="flex justify-center">
