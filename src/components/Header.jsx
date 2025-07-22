@@ -30,7 +30,7 @@ function Header() {
               `${baseLink} ${isActive ? activeLink : ""}`
             }
           >
-            About
+            Event Info
           </NavLink>
           <NavLink
             to="/program"
