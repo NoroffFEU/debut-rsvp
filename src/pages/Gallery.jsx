@@ -19,7 +19,7 @@ function Gallery() {
 
   return (
     <div className="min-h-screen px-4 py-10 max-w-4xl mx-auto text-center">
-      <h2 className="text-4xl font-bold text-pink-700 mb-6">
+      <h2 className="text-4xl font-bold text-[#ffbf00] mb-6">
         📸 Birthday Gallery
       </h2>
       <p className="text-white mb-10 max-w-xl mx-auto">

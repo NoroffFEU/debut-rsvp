@@ -54,10 +54,10 @@ function Gift() {
 
   return (
     <div className="min-h-screen flex flex-col items-center justify-center px-6 py-12 text-center">
-      <h2 className="text-4xl font-bold text-pink-700 mb-4">
+      <h2 className="text-4xl font-bold text-[#ffbf00] mb-4">
         💝 Send a Birthday Gift
       </h2>
-      <p className="text-[#ffbf00] mb-6 max-w-lg">
+      <p className="text-red-400 mb-6 max-w-lg">
         Your company alone shall truly bless us above all things,
         though if you kind-heartedly desire to bring a birthday present beside you,
         a monetary gift would be immensely appreciated xoxoxo.

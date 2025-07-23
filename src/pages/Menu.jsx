@@ -4,7 +4,7 @@ function Menu() {
   const navigate = useNavigate();
   return (
     <div className="max-w-2xl mx-auto px-4 py-10 text-center">
-      <h2 className="text-3xl font-semibold text-pink-700 mb-4">🍽️ Birthday Dinner Menu</h2>
+      <h2 className="text-3xl font-semibold text-[#ffbf00] mb-4">🍽️ Birthday Dinner Menu</h2>
       <p className="text-white">This page will showcase the food and drink menu for the birthday party.</p>
       <img
         src="/menu.jpg" // place your image in /public/menu.jpg or adjust the path

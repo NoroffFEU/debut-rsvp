@@ -30,7 +30,7 @@ export default function RSVPList() {
 
   return (
     <div className="max-w-5xl mx-auto mt-2 px-6 py-10 bg-black text-white rounded shadow-lg">
-      <h2 className="text-3xl font-bold text-pink-600 mb-6 text-center">
+      <h2 className="text-3xl font-bold text-[#ffbf00] mb-6 text-center">
         📋 RSVP Responses
       </h2>
 
@@ -42,22 +42,22 @@ export default function RSVPList() {
         <>
           {/* Desktop Table */}
           <div className="hidden md:block overflow-x-auto">
-            <table className="w-full text-left border border-pink-700">
+            <table className="w-full text-left border border-[#ffbf00]">
               <thead>
-                <tr className="bg-[#9a560c] text-white">
-                  <th className="p-3 border border-pink-700">Name</th>
-                  <th className="p-3 border border-pink-700">Guests</th>
-                  <th className="p-3 border border-pink-700">Message</th>
-                  <th className="p-3 border border-pink-700">Timestamp</th>
+                <tr className="bg-[#1a1a1a] text-red-500 text-center">
+                  <th className="p-3 border border-red-500">Name</th>
+                  <th className="p-3 border border-red-500">Guests</th>
+                  <th className="p-3 border border-red-500">Message</th>
+                  <th className="p-3 border border-red-500">Timestamp</th>
                 </tr>
               </thead>
               <tbody>
                 {rsvps.map(({ id, name, guests, message, timestamp }) => (
                   <tr key={id} className="hover:bg-[#9a560c]/50">
-                    <td className="p-3 border border-pink-700">{name || "—"}</td>
-                    <td className="p-3 border border-pink-700">{guests ?? 0}</td>
-                    <td className="p-3 border border-pink-700">{message || "—"}</td>
-                    <td className="p-3 border border-pink-700">
+                    <td className="p-3 border border-red-500">{name || "—"}</td>
+                    <td className="p-3 border border-red-500">{guests ?? 0}</td>
+                    <td className="p-3 border border-red-500">{message || "—"}</td>
+                    <td className="p-3 border border-red-500">
                       {timestamp?.seconds
                         ? new Date(timestamp.seconds * 1000).toLocaleString()
                         : "—"}
@@ -73,12 +73,12 @@ export default function RSVPList() {
             {rsvps.map(({ id, name, guests, message, timestamp }) => (
               <div
                 key={id}
-                className="bg-[#1a1a1a] border border-pink-700 rounded-lg p-4 shadow"
+                className="bg-[#1a1a1a] border border-red-500 rounded-lg p-4 shadow"
               >
-                <p><strong className="text-pink-500">Name:</strong> {name || "—"}</p>
-                <p><strong className="text-pink-500">Guests:</strong> {guests ?? 0}</p>
-                <p><strong className="text-pink-500">Message:</strong> {message || "—"}</p>
-                <p className="text-sm text-gray-400 mt-2">
+                <p><strong className="text-red-500">Name:</strong> {name || "—"}</p>
+                <p><strong className="text-red-500">Guests:</strong> {guests ?? 0}</p>
+                <p><strong className="text-red-500">Message:</strong> {message || "—"}</p>
+                <p className="text-sm text-red-400 mt-2">
                   {timestamp?.seconds
                     ? new Date(timestamp.seconds * 1000).toLocaleString()
                     : "—"}

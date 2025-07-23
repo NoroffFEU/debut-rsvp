@@ -18,7 +18,7 @@ function Program() {
   const navigate = useNavigate();
   return (
     <div className="min-h-screen px-6 py-12 max-w-3xl mx-auto text-center">
-      <h2 className="text-4xl font-bold text-pink-700 mb-6">
+      <h2 className="text-4xl font-bold text-[#ffbf00] mb-6">
         🎉 Celebration Program
       </h2>
       <p className="text-white mb-4">
