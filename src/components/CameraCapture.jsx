@@ -21,6 +21,7 @@ export default function CameraCapture({ rsvpName }) {
   const [message, setMessage] = useState("");
   const [showModal, setShowModal] = useState(false);
   const [gallery, setGallery] = useState([]);
+  const [selectedImage, setSelectedImage] = useState(null);
 
   const MAX_FILE_SIZE_MB = 30;
 
@@ -107,9 +108,7 @@ export default function CameraCapture({ rsvpName }) {
 
   return (
     <div className="text-center text-pink-700 mt-10">
-      <h3 className="text-lg font-semibold mb-2">
-        📷 Upload a Memory
-      </h3>
+      <h3 className="text-lg font-semibold mb-2">📷 Upload a Memory</h3>
 
       <textarea
         value={message}
@@ -181,7 +180,8 @@ export default function CameraCapture({ rsvpName }) {
                 key={idx}
                 src={item.url}
                 alt="uploaded"
-                className="rounded shadow"
+                className="rounded shadow cursor-pointer"
+                onClick={() => setSelectedImage(item.url)}
               />
             ) : (
               <video
@@ -194,6 +194,28 @@ export default function CameraCapture({ rsvpName }) {
           )}
         </div>
       </div>
+      {selectedImage && (
+        <div
+          className="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50"
+          onClick={() => setSelectedImage(null)}
+        >
+          <div className="relative">
+            <img
+              src={selectedImage}
+              alt="full"
+              className="max-h-[90vh] rounded-lg"
+            />
+            {/* <a
+              href={selectedImage}
+              download
+              className="absolute bottom-2 right-2 bg-black px-4 py-2 rounded shadow text-white font-semibold hover:bg-pink-200"
+              onClick={(e) => e.stopPropagation()}
+            >
+              Save
+            </a> */}
+          </div>
+        </div>
+      )}
     </div>
   );
 }
